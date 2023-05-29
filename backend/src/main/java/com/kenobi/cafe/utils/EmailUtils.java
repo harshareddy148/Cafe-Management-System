@@ -1,5 +1,7 @@
 package com.kenobi.cafe.utils;
 
+
+import com.kenobi.cafe.pojo.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -15,6 +17,8 @@ import java.util.List;
 public class EmailUtils {
     @Autowired
     private  JavaMailSender emailSender;
+
+
     public void sendSimpleMessage(String to, String subject, String text, List<String> list){
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("harshakristapathi@gmail.com");

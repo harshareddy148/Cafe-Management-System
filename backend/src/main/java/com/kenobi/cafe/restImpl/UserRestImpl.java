@@ -19,7 +19,8 @@ import java.util.Map;
 @RestController
 public class UserRestImpl implements UserRest {
     @Autowired
-     UserService userService;
+     private UserService userService;
+
     @Override
     public ResponseEntity<String> signUp(Map<String, String> requestMap) {
         try{
